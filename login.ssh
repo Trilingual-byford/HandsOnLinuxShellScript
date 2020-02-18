@@ -1,0 +1,13 @@
+#!/usr/bin/expect
+# Script by: Danie Pham
+# Website: https://www.writebash.com
+# Script date: 26-12-2017
+# Script ver: 1.0
+set user root
+set password 24025b3cbdde
+set ipaddr 222.186.23.158
+spawn ssh $user@$ipaddr
+expect "*?assword:*"
+send -- "$password\r"
+expect "$"
+interact
